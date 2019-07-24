@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Alcubierre";
+    src: url('Alcubierre.otf');
+}
+
+@font-face {
+    font-family: "Slim Joe";
+    src: url('Slim%20Joe.otf');
+}
+
+@font-face {
+    font-family: "Agane";
+    src: url('Agane/Agane%2075%20(Extra Bold).ttf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Agane";
+    src: url('Agane/Agane%2065%20(Bold).ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Agane";
+    src: url('Agane/Agane%2055%20(roman).ttf');
+}
+
+@font-face {
+    font-family: "Agane";
+    src: url('Agane/Agane%2045%20(light).ttf');
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: "BentonSans";
+    src: url('BentonSans/BentonSans%20Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "BentonSans";
+    src: url('BentonSans/BentonSans%20Condensed%20Light.otf');
+    font-stretch: ultra-condensed;
+}
+
+@font-face {
+    font-family: "BentonSans";
+    src: url('BentonSans/BentonSans%20Light.otf');
+    font-stretch: extra-condensed;
+}
+
+@font-face {
+    font-family: "BentonSans";
+    src: url('BentonSans/BentonSans%20Thin.otf');
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: "BentonSans";
+    src: url('BentonSans/BentonSans%20Regular.otf');
+}
+
+@font-face {
+    font-family: "BentonSans";
+    src: url('BentonSans/BentonSans%20Medium.otf');
+    font-stretch: semi-expanded
+}
+
+@font-face {
+    font-family: "Code";
+    src: url('Code.otf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('Open%20Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lovelo";
+    src: url('Lovelo/Lovelo%20Black.otf');
+}
