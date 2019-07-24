@@ -143,14 +143,6 @@ MAIN FEATURED ARTICLE
         </a>
     </section>
 -->
-
-
-
-
-
-
-
-
             <?php
 //                $limit = 6;
 //                $colevery = $limit / 2;
@@ -172,13 +164,6 @@ MAIN FEATURED ARTICLE
                     
    //             }
   ?>
-
-
-
-   
-  
-
-
 
     <!--
     <section class="container-fluid m-section-inside-padding m-section-category-wrapper">
@@ -225,11 +210,6 @@ MAIN FEATURED ARTICLE
                 </div>
             </div>
 -->
-
-
-
-
-
 
         <!--
                 <div class="col-xs-12 col-md-5 m-column-second">
@@ -281,25 +261,10 @@ MAIN FEATURED ARTICLE
         </section>
 -->
 
-
-
-
-
-
         <?php include './components/footer.php';?>
 </body>
 
 </html>
-<!--
-<script type="text/javascript">
-    var typed = new Typed('#wrapper-text-span', {
-        strings: ["", "Choose a category and explore."],
-        typeSpeed: 60
-    });
-
-</script>
--->
-
 <script type="text/javascript">
     var typed = new Typed('.m-typed', {
         strings: ["", "For teens. By teens"],
