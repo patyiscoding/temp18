@@ -36,13 +36,7 @@
         </div>
     </section>
 
-
-
-
-
-
-
-    <section class="container-fluid au-backstory-container-fluid">
+    <section class="container-fluid au-backstory-container-fluid descriptions">
         <div class="au-backstory-container row">
             <div class="au-rotated"></div>
             <div class="au-backstory row">
@@ -68,6 +62,7 @@
             if (!mysqli_connect_errno()){
                 $result3 = $connect->query("SELECT DISTINCT(author_division) FROM authors");
                 while ($row = $result3->fetch_assoc()){
+                    if($row["author_division"] != "Alumni") {
                         echo '<div class="au-author row section-padding '.$row["author_division"].'">';
                         echo '<div class="col-xs-12 section-inside-padding">';
                         echo '<div class="au-title"><h2>'.$row["author_division"].'</h2></div>';
@@ -78,15 +73,10 @@
                             echo drawDescriptions($row["author_division"]);
                          echo '</div>';
                          echo '</div>';
+                    }
                 }
             }
                 ?>
-            <!--
-                <script type="text/javascript">
-                    colorAuthorSections();
-
-                </script>
--->
     </section>
     <?php include '../components/footer.php';?>
 </body>
@@ -100,5 +90,4 @@
         backDelay: 1300,
         loop: true,
     });
-
 </script>

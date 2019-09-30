@@ -1620,19 +1620,11 @@ article {
     background-color: #fff;
 }
 
-.Founders .au-title::after {
+.descriptions .au-author:nth-child(odd) .au-title::after {
     background-color: #333;
 }
 
-.Business\/Marketing .au-title::after {
-    background-color: #fff;
-}
-
-.Divisions .au-title::after {
-    background-color: #b3cadc;
-}
-
-.Editors\/Writers .au-title::after {
+.descriptions .au-author:nth-child(even) .au-title::after {
     background-color: #b3cadc;
 }
 
@@ -1722,30 +1714,13 @@ article {
     background-color: #f4d3c3;
 }
 
-.Founders .au-descr-line::before {
+.descriptions .au-author:nth-child(odd) {
     background-color: #333;
+    color: #f8f8f8;
 }
 
-.Business\/Marketing .au-descr-line::before {
+.descriptions .au-author:nth-child(even) .au-descr-line::before {
     background-color: #f8f8f8;
-}
-
-.Business\/Marketing {
-    background-color: #444;
-    color: #f8f8f8;
-}
-
-.Divisions .au-descr-line::before {
-    background-color: #b3cadc;
-}
-
-.Editors\/Writers .au-descr-line::before {
-    background-color: #b3cadc;
-}
-
-.Editors\/Writers {
-    background-color: #333;
-    color: #f8f8f8;
 }
 
 .au-descr {
