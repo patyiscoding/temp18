@@ -94,15 +94,6 @@ function drawPost($id){
                      case 1:
                          $result2 .= '<div class="col-xs-12 col-md-4 box">';
                          break;
-//                     case 2:
-//                         $result2 .= '<div class="col-xs-12 col-md-6 box">';
-//                         break;
-//                     case 3:
-//                         $result2 .= '<div class="col-xs-12 col-md-9 box">';
-//                         break;
-//                     default:
-//                         $result2 .= '<div class="col-xs-12 col-md-3 box">';
-//                         break;
                  }
                  $result2 .= "<a class='m-box' href='/temp18/article/$url/' name='$article_id'>";
                  $result2 .= "<div class='col-xs-12 m-image-wrapper'>";
@@ -276,22 +267,6 @@ function drawCategorySectionMain($id){
                      $result2 .= "<a href='http://temp18.co/article/$s_url/'><h2>".$s_title."</h2></a>";
                      $result2 .= "<a href='http://temp18.co/article/$s_url/'><p style='color: $secondary_color'>READ THE POST</p></a></div>";
                      
-        
-            
-                     
-//                     $result2 .= '<article class="c-last-news_item overline is-active" style="z-index: 35;">';
-//                     $result2 .= '<div class="c-last-news_content js-wow is-animated" style="opacity: 0.521758; transform: translate(71.7363%, 0%) translate3d(0px, 0px, 0px); visibility: visible;">';
-//                     $result2 .= '<div class="o-container_content  js-wow is-animated" style="visibility: visible;">';
-//                     $result2 .= '<p class="c-last-news_infos">';
-//                     $result2 .= $s_date." | ".$s_author;
-//                     $result2 .= '</p>';
-//                     $result2 .= '<p class="c-last-news_intro o-subtitle">';
-//                     $result2 .= "<a href='http://temp18.co/article/$s_url/'>$s_title</a>";
-//                     $result2 .= "</p>";
-//                     $result2 .= "<a href='http://temp18.co/article/$s_url/' class='c-last-news_more o-link'>";
-//                     $result2 .= 'Read the post<span class="overlay">Read the post</span>';
-//                     $result2 .= "</a></div></div>";
-//                     $result2 .= "</article>";
                      $temp++;
                  }
                  $result2 .= '</div></div></section></div></div></section>';
@@ -393,7 +368,6 @@ function drawArticle($articleURL){
     }
 }
 
-
 function drawCategoryPage($category){
     require("../config.php");
     $connect = new mysqli($addressdb, $logindb, $passworddb, $namedb);
@@ -412,7 +386,6 @@ function drawCategoryPage($category){
         return $result2;
     }
 }
-
 
 function drawDescriptions($division){
     require("../config.php");
@@ -449,17 +422,6 @@ function drawDescriptions($division){
                      $switch = 0;
                  }
                  $result2 .= '<div class="addflex"><div class="col-xs-12 col-md-6">';
-                 // temporarily here
-//                 $result2 .= '<svg class="img-responsive center-block au-photo"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 739">
-//                        <defs>
-//                            <style>
-//                                .cls-1{fill:#0096b9;}.cls-2{font-size:180px;fill:#fff;font-family:LoveloBlack, Lovelo;}
-//                            </style>
-//                        </defs>
-//                        <title>Temp18</title>
-//                        <circle class="cls-1" cx="368" cy="372.5" r="343.48"/>
-//                        <text class="cls-2" transform="translate(60.25 425.7)">PHOTO</text>
-//                    </svg>';
                  $result2 .= '<div class="center-block au-photo image-cropper-descr">';
                  $result2 .= "<img src='$picture_path'></div>";
                  $result2 .= '<div><h2 class="au-name">';
