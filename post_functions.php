@@ -110,12 +110,9 @@ function drawPost($id){
                  $result2 .= "<div></div>";
                  $result2 .= '<img src="';
                  $result2 .= $picturepath;
-                 $result2 .= '">';
-                 $result2 .= '</div></div>';
+                 $result2 .= '"></div></div>';
                  $result2 .= "<div class='col-xs-12 m-content-wrapper'>";
-                 $result2 .= "<div><h2>";
-                 $result2 .= $title;
-                 $result2 .= "</h2></div>";
+                 $result2 .= "<div><h2>".$title."</h2></div>";
                  $result2 .= '<p class="m-descr-p"></p>';
                  $result2 .= '<div class="m-article-content"><p>';
                  $result2 .= rtrim(substr($content, 0, 200));
@@ -161,14 +158,10 @@ function drawPostCategory($id, $categoryName){
                  $result2 .= "<div></div>";
                  $result2 .= '<img src="http://temp18.co/';
                  $result2 .= $picturepath;
-                 $result2 .= '">';
-                 $result2 .= '</div></div>';
+                 $result2 .= '"></div></div>';
                  $result2 .= "<div class='col-xs-12 m-content-wrapper'>";
-                 $result2 .= "<div>";
-                 $result2 .= '<p>'.$date." | ".$author."</p>";
-                 $result2 .= "<h2>";
-                 $result2 .= $title;
-                 $result2 .= "</h2></div>";
+                 $result2 .= "<div><p>".$date." | ".$author."</p>";
+                 $result2 .= "<h2>".$title."</h2></div>";
                  $result2 .= '<div class="m-article-content"><p>';
                  $result2 .= rtrim(substr($content, 0, 200));
                  $result2 .= '...</p></div></div></a></div>';
@@ -334,15 +327,11 @@ function drawArticle($articleURL){
             $result2 .= '</div></div>';
             
             $result2 .= '<div class="container-fluid a-main section-padding section-inside-padding">';
-            $result2 .= '<div class="row">';
-            $result2 .= '<div class="col-xs-12">';
+            $result2 .= '<div class="row"><div class="col-xs-12">';
             
             $result2 .= '<section class="a-article-header-container">';
             $result2 .= '<div class="section-padding a-title-container">';
-            $result2 .= '<div>';
-            $result2 .= '<div class="a-title"><h2>';
-            $result2 .= $title;
-            $result2 .= '</h2></div>';
+            $result2 .= '<div><div class="a-title"><h2>'.$title.'</h2></div>';
             $result2 .= '<div class="a-descr">';
             $result2 .= '<div><span>By</span><span class="a-descr-name">';
             $count = 1;

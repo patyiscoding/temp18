@@ -7,16 +7,6 @@
 
 <body>
     <?php include '../components/header.php'; ?>
-    <!--
-    <section class="container-fluid section-padding page-heading">
-        <div class="row section-inside-padding">
-            <div class="co-header-title">
-                <h2>Contact</h2>
-            </div>
-        </div>
-    </section>
-    <div class="co-header-section-rotated"></div>
--->
     <section class="container-fluid co-content">
         <div class="row co-content-row">
             <div class="col-xs-12 col-md-7 section-padding co-left section-inside-padding">
