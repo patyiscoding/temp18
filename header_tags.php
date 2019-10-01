@@ -41,7 +41,5 @@
 <link href="/fonts/fonts.css" rel="stylesheet" type="text/css">
 <link href="/css/css.css" rel="stylesheet" type="text/css">
 <link href="/css/front.css" rel="stylesheet" type="text/css">
-<!--<link href="/main.css" rel="stylesheet" type="text/css">-->
 <link href="/css/animate.css" rel="stylesheet" type="text/css">
-<!--<link href="/slideShow.css" rel="stylesheet" type="text/css">-->
 <link href="/css/slideShowBack.css" rel="stylesheet" type="text/css">

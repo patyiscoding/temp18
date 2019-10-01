@@ -65,20 +65,6 @@ function drawMainSlideshow(){
                 $result2 .= "</div>";
                 $temp++;
          }
-        
-      
-        
-//        <ul class="slick-dots" style="display: block;">
-//             <li class="">
-//             <button type="button" data-role="none">1</button>
-//             </li>
-//             <li class="">
-//             <button type="button" data-role="none">2</button>
-//             </li>
-//             <li class="slick-active">
-//             <button type="button" data-role="none">3</button>
-//             </li>
-//        </ul>
         $result2 .= "</div></div>";
         return $result2;
     }
@@ -127,16 +113,13 @@ function drawPost($id){
                  $result2 .= '">';
                  $result2 .= '</div></div>';
                  $result2 .= "<div class='col-xs-12 m-content-wrapper'>";
-                 $result2 .= "<div>";
-                 $result2 .= "<h2>";
+                 $result2 .= "<div><h2>";
                  $result2 .= $title;
-                 $result2 .= "</h2>";
-                 $result2 .= "</div>";
+                 $result2 .= "</h2></div>";
                  $result2 .= '<p class="m-descr-p"></p>';
                  $result2 .= '<div class="m-article-content"><p>';
                  $result2 .= rtrim(substr($content, 0, 200));
                  $result2 .= '...</p></div></div></a></div>';
-
 
                 return $result2;
              }
@@ -185,8 +168,7 @@ function drawPostCategory($id, $categoryName){
                  $result2 .= '<p>'.$date." | ".$author."</p>";
                  $result2 .= "<h2>";
                  $result2 .= $title;
-                 $result2 .= "</h2>";
-                 $result2 .= "</div>";
+                 $result2 .= "</h2></div>";
                  $result2 .= '<div class="m-article-content"><p>';
                  $result2 .= rtrim(substr($content, 0, 200));
                  $result2 .= '...</p></div></div></a></div>';
@@ -319,30 +301,14 @@ function drawCategorySectionMain($id){
 //                     $result2 .= "</article>";
                      $temp++;
                  }
-                 $result2 .= '</div>';
-//                 $result2 .= '<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-//                                    <span class="glyphicon glyphicon-chevron-left"></span>
-//                                    <span class="sr-only">Previous</span>
-//                                  </a><a class="right carousel-control" href="#myCarousel" data-slide="next">
-//                                    <span class="glyphicon glyphicon-chevron-right"></span>
-//                                    <span class="sr-only">Next</span>
-//                                  </a>';
-                 $result2 .= '</div>';
-                 $result2 .= "</section></div>";
-                 $result2 .= "</div></section>";
-
+                 $result2 .= '</div></div></section></div></div></section>';
                 return $result2;
              }
          }
     }else{
         echo mysqli_connect_error();
     }
-    
-
-
 }
-
-
 
 function drawArticle($articleURL){
     require("../config.php");
@@ -365,14 +331,7 @@ function drawArticle($articleURL){
             $result2 .= '<div class="container-fluid a-container"><div class="container-fluid a-img-container">';
             $result2 .= '<div class="a-img">';
             $result2 .= "<img src='http://temp18.co/$picturepath'>";
-            $result2 .= '</div>';
-//            $result2 .= '<div class="a-img-overlay">';
-//            $result2 .= '<div class="a-rotated">';
-//            $result2 .= '</div>';
-//            $result2 .= '<div class="a-img-overlay-bottom">';
-//            $result2 .= '</div>';
-//            $result2 .= '</div>';
-            $result2 .= '</div>';
+            $result2 .= '</div></div>';
             
             $result2 .= '<div class="container-fluid a-main section-padding section-inside-padding">';
             $result2 .= '<div class="row">';
@@ -381,15 +340,11 @@ function drawArticle($articleURL){
             $result2 .= '<section class="a-article-header-container">';
             $result2 .= '<div class="section-padding a-title-container">';
             $result2 .= '<div>';
-            $result2 .= '<div class="a-title">';
-            $result2 .= '<h2>';
+            $result2 .= '<div class="a-title"><h2>';
             $result2 .= $title;
-            $result2 .= '</h2>';
-            $result2 .= '</div>';
+            $result2 .= '</h2></div>';
             $result2 .= '<div class="a-descr">';
-            $result2 .= '<div>';
-            $result2 .= '<span>By</span>';
-            $result2 .= '<span class="a-descr-name">';
+            $result2 .= '<div><span>By</span><span class="a-descr-name">';
             $count = 1;
             foreach($authorArray as $value){
                 $authorsArray = $connect->query("SELECT * FROM authors WHERE id = '$value'") or die($connect->error);
@@ -405,25 +360,15 @@ function drawArticle($articleURL){
                 }
                 $count++;
             }
-            $result2 .= '</span>';
-            $result2 .= '</div>';
-            $result2 .= '<p>';
+            $result2 .= '</span></div><p>';
             $result2 .= $date;
-            $result2 .= '</p>';
-            $result2 .= '</div>';
-            $result2 .= '</div>';
-            $result2 .= '</div>';
-            $result2 .= '</section>';
+            $result2 .= '</p></div></div></div></section>';
             
             $result2 .= '<section class="semi-article-padding">';
-            $result2 .= '<article>';
-            $result2 .= '<div>';
+            $result2 .= '<article><div>';
             $result2 .= '<div class="a-content">';
             $result2 .= $content;
-            $result2 .= '</div>';
-            $result2 .= '</div>';
-            $result2 .= '</article>';
-            $result2 .= '</section>';
+            $result2 .= '</div></div></article></section>';
                      
             $result2 .= '<section class="a-contact">';
             $result2 .= '<span>Have any concerns or questions about what you just read? Let us know by leaving us a message!</span>';
@@ -444,33 +389,16 @@ function drawArticle($articleURL){
                 $result2 .= '<div class="article-footer-img">';
                 $result2 .= '<div class="image-cropper">';
                 $result2 .= "<img src=$author_url>";
-                $result2 .= '</div>';
-                $result2 .= '</div>';
-                $result2 .= '<h2>';
-                $result2 .= $author;
-                $result2 .= '</h2>';
-                $result2 .= '<h2>';
-                $result2 .= $author_role;
-                $result2 .= '</h2>';
+                $result2 .= '</div></div>';
+                $result2 .= '<h2>'.$author.'</h2>';
+                $result2 .= '<h2>'.$author_role.'</h2>';
                 $result2 .= '</div>';
                 $result2 .= '<div class="col-xs-7">';
                 $result2 .= '<div class="article-footer-descr">';
-                $result2 .= '<p>';
-                $result2 .= $author_short_descr;
-                $result2 .= '</p>';
-                $result2 .= '</div>';
-                $result2 .= '</div>';
-                $result2 .= '</div>';
-                $result2 .= '</div>';
-                $result2 .= '</section>';
-                
+                $result2 .= '<p>'.$author_short_descr.'</p>';
+                $result2 .= '</div></div></div></div></section>';     
             }
-            $result2 .= '</div>';
-            $result2 .= '</div>';
-            $result2 .= '</div>';
-            $result2 .= '</div>';
-                
-                
+            $result2 .= '</div></div></div></div>';  
         }
         return $result2;
     }
@@ -483,7 +411,6 @@ function drawCategoryPage($category){
     $connect->set_charset('utf8mb4'); 
     $result2 = "";
     if (!mysqli_connect_errno()){
-//        echo 'hi';
 //        $result = $connect->query("SELECT * FROM articles WHERE category_name = '$category' ORDER BY date DESC LIMIT 2O") or die($connect->error);
         $result3 = $connect->query("SELECT * FROM categories WHERE category_name = '$category'") or die($connect->error);
         $categoryArray = mysqli_fetch_array($result3);
@@ -494,9 +421,6 @@ function drawCategoryPage($category){
         $result2 .= '<div>';
         $result2 .= "<h2>".$category."</h2></div></section>";
         return $result2;
-//        while ($row = $result->fetch_assoc()){
-//            
-//        }
     }
 }
 
@@ -526,7 +450,6 @@ function drawDescriptions($division){
 //                 if($countDivisionRows % 3 == 2 && ($k == $countDivisionRows || $k == $countDivisionRows - 1)){
 //                     $result2 .= '<div class="col-xs-12 col-md-6 au-author-container">';
 //                 }else{}
-//                
                  if($switch == 0){
                     $result2 .= '<div class="col-xs-12 col-md-6 au-author-container clearfix">';
                  }else{
@@ -567,8 +490,6 @@ function drawDescriptions($division){
         return $result2;
     }
 }
-// if numberofcategoryentries % 3 = 2 
-
 
 function drawCategories($id){
     require("../config.php");
@@ -641,8 +562,7 @@ function drawHeaderCategories2($id){
          }
     }else{
         echo mysqli_connect_error();
-    }
-        
+    } 
 }
 
 function drawRandomCategories($id){
@@ -666,7 +586,6 @@ function drawRandomCategories($id){
         echo mysqli_connect_error();
     }
 }
-
 
 //    $colorsArray = array("E5D7C6", "CCAF8E", "FFD6BA", "FFE66D", "4ECDC4", "F7FFF7", "FF6B6B", "1A535C");      
 //         style='background-color: $colorsArray[$id]     
