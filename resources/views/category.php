@@ -4,7 +4,7 @@
     <?php include '../header_tags.php'; 
    
     require("../../config.php");
-    $connect = new mysqli($addressdb, $logindb, $passworddb, $namedb);
+    $connect = new PDO($_ENV['DV_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
     $connect->set_charset('utf8mb4');
     if (!mysqli_connect_errno()){
     	$category = $_GET['category'];

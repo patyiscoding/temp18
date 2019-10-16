@@ -1,6 +1,6 @@
 <?php
 function drawMainSlideshow(){
-    $connect = new mysqli($_ENV['DV_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+    $connect = new PDO($_ENV['DV_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
     if (!mysqli_connect_errno()){
         $limit = 7;
          $result = $connect->query("SELECT * FROM articles WHERE id IN (SELECT article_id FROM slideshow) LIMIT $limit");
@@ -72,7 +72,7 @@ function drawMainSlideshow(){
 
 function drawPost($id){
         
-        $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+        $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
     if (!mysqli_connect_errno()){
         $limit = 6;
         $result = $connect->query("SELECT * FROM articles ORDER BY date DESC LIMIT $limit");
@@ -118,7 +118,7 @@ function drawPost($id){
 
 function drawPostCategory($id, $categoryName){
         
-        $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+        $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
         $connect->set_charset('utf8mb4');
     if (!mysqli_connect_errno()){
         $result3 = $connect->query("SELECT id FROM categories WHERE category_name = '$categoryName'");
@@ -167,7 +167,7 @@ function countRows($table){
         
         $i = 0;
 
-        $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+        $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
      if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT id FROM $table");
         while ($row = $result->fetch_assoc()){
@@ -443,7 +443,7 @@ function drawDescriptions($division){
 
 function drawCategories($id){
     
-    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+    $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $result2 = '';
@@ -464,7 +464,7 @@ function drawCategories($id){
 
 function drawHeaderCategories($id){
     
-    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+    $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $result2 = '';
@@ -484,7 +484,7 @@ function drawHeaderCategories($id){
 
 function drawHeaderCategories2($id){
      
-    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+    $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $numResults = mysqli_num_rows($result);
@@ -517,7 +517,7 @@ function drawHeaderCategories2($id){
 
 function drawRandomCategories($id){
     
-    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
+    $connect = new PDO($_ENV['DB_HOST'], $_ENV['DB_DATABASE'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $result2 = '';
