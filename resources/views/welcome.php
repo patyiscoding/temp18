@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php include './components/header.php'; ?>
+    <?php include(app_path().'/files/components/header.php'); ?>
 
     <section class="slideshow-section">
         <div class="row m-articles-section-row">
@@ -35,7 +35,7 @@
 ?>
 </section>
 
-    <?php include './components/footer.php';?>
+    <?php include(app_path().'/files/components/footer.php');?>
 </body>
 
 </html>

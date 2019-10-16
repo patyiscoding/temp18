@@ -1,7 +1,6 @@
 <?php
 function drawMainSlideshow(){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+    $connect = new mysqli($_ENV['DV_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
     if (!mysqli_connect_errno()){
         $limit = 7;
          $result = $connect->query("SELECT * FROM articles WHERE id IN (SELECT article_id FROM slideshow) LIMIT $limit");
@@ -72,8 +71,8 @@ function drawMainSlideshow(){
 
 
 function drawPost($id){
-        require("../config.php");
-        $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+        
+        $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
     if (!mysqli_connect_errno()){
         $limit = 6;
         $result = $connect->query("SELECT * FROM articles ORDER BY date DESC LIMIT $limit");
@@ -118,8 +117,8 @@ function drawPost($id){
 }
 
 function drawPostCategory($id, $categoryName){
-        require("../config.php");
-        $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+        
+        $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
         $connect->set_charset('utf8mb4');
     if (!mysqli_connect_errno()){
         $result3 = $connect->query("SELECT id FROM categories WHERE category_name = '$categoryName'");
@@ -165,10 +164,10 @@ function drawPostCategory($id, $categoryName){
 }
 
 function countRows($table){
-        require("../config.php");
+        
         $i = 0;
 
-        $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+        $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
      if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT id FROM $table");
         while ($row = $result->fetch_assoc()){
@@ -182,8 +181,8 @@ function countRows($table){
 
 
 function drawCategorySectionMain($id){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb, $passworddb, $namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
     $connect->set_charset('utf8mb4');
      if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
@@ -279,8 +278,8 @@ function drawCategorySectionMain($id){
 }
 
 function drawArticle($articleURL){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb, $passworddb, $namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
     $connect->set_charset('utf8mb4'); 
     $result2 = "";
     if (!mysqli_connect_errno()){
@@ -369,8 +368,8 @@ function drawArticle($articleURL){
 }
 
 function drawCategoryPage($category){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb, $passworddb, $namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
     $connect->set_charset('utf8mb4'); 
     $result2 = "";
     if (!mysqli_connect_errno()){
@@ -388,8 +387,8 @@ function drawCategoryPage($category){
 }
 
 function drawDescriptions($division){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb, $passworddb, $namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
     $connect->set_charset('utf8mb4');   
     $rowNum = countRows('authors');
     $k = 1;
@@ -443,8 +442,8 @@ function drawDescriptions($division){
 }
 
 function drawCategories($id){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $result2 = '';
@@ -464,8 +463,8 @@ function drawCategories($id){
 }
 
 function drawHeaderCategories($id){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $result2 = '';
@@ -484,8 +483,8 @@ function drawHeaderCategories($id){
 }
 
 function drawHeaderCategories2($id){
-     require("../config.php");
-    $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+     
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $numResults = mysqli_num_rows($result);
@@ -517,8 +516,8 @@ function drawHeaderCategories2($id){
 }
 
 function drawRandomCategories($id){
-    require("../config.php");
-    $connect = new mysqli($addressdb, $logindb,$passworddb,$namedb);
+    
+    $connect = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD'],$_ENV['DB_DATABASE']);
     if (!mysqli_connect_errno()){
         $result = $connect->query("SELECT * FROM categories");
         $result2 = '';
