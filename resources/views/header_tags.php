@@ -26,20 +26,20 @@
   crossorigin="anonymous" data-role="none"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/carousel.swipe.js"></script>
-<script src="/js/js.js"></script>
-<script src="/js/slideShowOne.js"></script>
-<script src="/js/slideShowTwo.js"></script>
+<script src="/resources/js/bootstrap.min.js"></script>
+<script src="/resources/js/carousel.swipe.js"></script>
+<script src="/resources/js/js.js"></script>
+<script src="/resources/js/slideShowOne.js"></script>
+<script src="/resources/js/slideShowTwo.js"></script>
 <!--<script src="/slideShowTwoBack2.js"></script>-->
-<script src="/js/slideShowThree.js"></script>
-<script src="/js/typed.js"></script>
+<script src="/resources/js/slideShowThree.js"></script>
+<script src="/resources/js/typed.js"></script>
 <?php include 'post_functions.php' ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-<link href="/fonts/fonts.css" rel="stylesheet" type="text/css">
-<link href="/css/css.css" rel="stylesheet" type="text/css">
-<link href="/css/front.css" rel="stylesheet" type="text/css">
-<link href="/css/animate.css" rel="stylesheet" type="text/css">
-<link href="/css/slideShowBack.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/fonts/fonts.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/css.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/front.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/animate.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/slideShowBack.css" rel="stylesheet" type="text/css">
