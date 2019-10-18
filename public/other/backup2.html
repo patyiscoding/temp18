@@ -1,0 +1,77 @@
+
+    
+    <div class="container-fluid header">
+        <div class="col-xs-12">
+            <nav class="flex">
+                <div class="col-xs-2 header-left">
+                    <div class="header-middle-inside">
+                        <div class="dropdown">
+                            <span class="dropdown-button">Topics</span>
+                            <div class="dropdown-content">
+                                <?php  
+                        for($i = 0; $i <countRows('categories'); $i++){
+                            echo drawHeaderCategories($i+1); 
+                        }
+                    ?>
+                            </div>
+                        </div>
+                        <!--                    <span><a class="hoverline" href="">Favorites</a></span>-->
+
+                        <span><a class="hoverline" href="./about-us">About Us</a></span>
+                    </div>
+
+                </div>
+                <div class="col-xs-8 header-middle">
+                    <h2><a href="./">Temp 18&#176;</a></h2>
+                    <h2>By Teens. For Teens</h2>
+                </div>
+                <div class="col-xs-2 header-right">
+                    <div class="header-right-inside semi-flex">
+                        <!--
+                        <div class="search-svg" tabindex="1">
+                            <svg version="1.1" id="magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 283.464 283.464" enable-background="new 0 0 283.464 283.464" xml:space="preserve">
+                     <g >
+                        <path fill-rule="evenodd" clip-rule="evenodd" fill="#D1D3D4" d="M268.406,252.847l-75.155-75.154
+                            c32.199-39.724,29.826-98.162-7.131-135.114c-39.5-39.5-103.544-39.5-143.044,0c-39.5,39.495-39.5,103.538,0,143.039
+                            c36.957,36.957,95.396,39.329,135.12,7.131l75.153,75.155c4.15,4.158,10.897,4.158,15.057,0
+                            C272.565,263.744,272.565,256.996,268.406,252.847z M58.132,170.561c-31.182-31.182-31.182-81.745,0-112.927
+                            c31.187-31.182,81.739-31.182,112.933,0c31.181,31.183,31.181,81.746,0,112.927C139.871,201.744,89.318,201.744,58.132,170.561z"/>
+                    </g>
+                    </svg>
+                        </div>
+-->
+                        <!--SEARCH
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input">
+                            <div id="search-input-svg">
+                                <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44 44" width="17px" style="enable-background:new 0 0 44 44;" xml:space="preserve">
+<path fill="#4D4D4D" d="M38.8,0L44,5.2L5.2,44L0,38.8L38.8,0z M5.2,0L44,38.8L38.8,44L0,5.2L5.2,0z"/>
+</svg>
+                            </div>
+                        </div>
+-->
+                        <div id="dropdown-menu">
+                            <svg id="menu" class="menu" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.03 70.05">
+
+                        <line class="cls-1" x1="5.39" y1="15.85" x2="63.39" y2="15.85" />
+                        <line class="cls-1" x1="5.39" y1="35.35" x2="63.39" y2="35.35" />
+                        <line class="cls-1" x1="5.39" y1="35.35" x2="63.39" y2="35.35" />
+                        <line class="cls-1" x1="5.39" y1="54.85" x2="63.39" y2="54.85" />
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    stroke-linecap: round;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 7px;
+                                }
+
+                            </style>
+                        </defs>
+                    </svg>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div>
