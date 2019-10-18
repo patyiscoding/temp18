@@ -1,9 +1,9 @@
 <?php
-use App\Kernel;
+// use App\Kernel;
 
-require dirname(__DIR__).'/config/bootstrap.php';
+// require dirname(__DIR__).'/config/bootstrap.php';
 
-$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
+// $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
 
 
 //  $dotenv = new Dotenv();
