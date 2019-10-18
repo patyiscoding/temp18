@@ -34,7 +34,7 @@
 <!--<script src="/slideShowTwoBack2.js"></script>-->
 <script src="/assets/js/slideShowThree.js"></script>
 <script src="/assets/js/typed.js"></script>
-<?php //include 'post_functions.php' ?>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet">

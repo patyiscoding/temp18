@@ -19,14 +19,12 @@
 <body>
     <?php 
     include '../components/header.php'; 
-    ?>
 
-    <?php 
-                  if(isset($_GET['url'])){
-                    echo drawArticle($_GET['url']); 
-                  }
-                ?>
-    <?php include '../components/footer.php'; ?>
+    if(isset($_GET['url'])){
+      echo drawArticle($_GET['url']); 
+    }
+    
+    include '../components/footer.php'; ?>
 </body>
 
 </html>

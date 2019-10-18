@@ -1,3 +1,12 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+# article:
+#    path: /article
+#    controller: App\Controller\ArticleController::show
+
+# about:
+#    path: /about
+#    controller: App\Controller\AboutController::show
+
+# contact:
+#    path: /contact
+#    controller: App\Controller\ContactController::show
+
