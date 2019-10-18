@@ -30,9 +30,9 @@
                         
 
                         <?php 
-                        for($i = 1; $i <= countRows('categories'); $i++){
-                            echo drawHeaderCategories2($i);
-                        }
+                        // for($i = 1; $i <= countRows('categories'); $i++){
+                        //     echo drawHeaderCategories2($i);
+                        // }
                         
                     ?>
                       <li class='sticky_link'>

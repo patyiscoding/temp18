@@ -34,10 +34,12 @@
 <!--<script src="/slideShowTwoBack2.js"></script>-->
 <script src="/resources/js/slideShowThree.js"></script>
 <script src="/resources/js/typed.js"></script>
-<?php include (app_path().'/files/functions/post_functions.php') ?>
+<?php // include (app_path().'/files/functions/post_functions.php') ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}"> -->
+<base href="/" target="_top">
+<link href="{{ URL::style('bootstrap.min.css') }}" rel="stylesheet">
 <link href="/resources/fonts/fonts.css" rel="stylesheet" type="text/css">
 <link href="/resources/css/css.css" rel="stylesheet" type="text/css">
 <link href="/resources/css/front.css" rel="stylesheet" type="text/css">

@@ -3,7 +3,7 @@
 
 <head>
     <title>Temp 18° - Online magazine for teens</title>
-    <?php include 'header_tags.php'; ?>
+    <?php include('header_tags.php'); ?>
     <meta name="description" content="Online magazine and platform for teenagers to learn about current news, lifestyle, entertainment, fashion, tech, sports, science from other teenagers" />
     <link rel="canonical" href="http://temp18.co/" />
     <meta name="keywords" content="Temp 18, Teen magazine, Magazine, Teens, For teens, Read, Teenagers, Lifestyle, Fashion, Tech, Sports, Test Prep">
@@ -16,7 +16,7 @@
     <section class="slideshow-section">
         <div class="row m-articles-section-row">
             <?php
-            echo drawMainSlideshow();
+            // echo drawMainSlideshow();
             ?>
 
         </div>
@@ -29,9 +29,9 @@
 
 <section class="main-category-wrapper">
     <?php
-    for($i = 1; $i <= countRows('categories'); $i++){
-        echo drawCategorySectionMain($i);
-    }
+    // for($i = 1; $i <= countRows('categories'); $i++){
+    //     echo drawCategorySectionMain($i);
+    // }
 ?>
 </section>
 
