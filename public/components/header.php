@@ -30,13 +30,13 @@
                         
 
                         <?php 
-                        // for($i = 1; $i <= countRows('categories'); $i++){
-                        //     echo drawHeaderCategories2($i);
-                        // }
+                        for($i = 1; $i <= countRows('categories'); $i++){
+                            echo drawHeaderCategories2($i);
+                        }
                         
                     ?>
                       <li class='sticky_link'>
-                            <a href='http://temp18.co/about-us/'><span>About</span>
+                            <a href='/about-us/'><span>About</span>
                             </a>
                         </li>
                     </ul>

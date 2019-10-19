@@ -511,7 +511,8 @@ function drawHeaderCategories2($id){
     $connect = open_database_connection();
     try{
         $result = $connect->query("SELECT * FROM categories");
-        $numResults = mysqli_num_rows($result);
+        $countRows = $connect->query('SELECT COUNT(*) FROM categories');
+        $numResults = $countRows->fetchColumn();
         $result2 = '';
         
          while ($row = $result->fetch(PDO::FETCH_ASSOC)){
@@ -519,14 +520,14 @@ function drawHeaderCategories2($id){
                  $category_name = $row["category_name"];
                  $category_name_wout_space = str_replace(' ','%20', $category_name);
                  $result2 .= '<li class="sticky_link">';
-                 $result2 .= "<a href='http://temp18.co/category/$category_name_wout_space/'><span>";
+                 $result2 .= "<a href='/category/$category_name_wout_space/'><span>";
 //                 style='-webkit-transition-delay: .$delay";
 //                 $result2 .= "s; transition-delay: .$delay";
                  $result2 .= "$category_name</span></a>";
                  $result2 .= "</li>";
                 if((intval($numResults / 2) + 1) == $id){
                    $result2 .= '<li class="sticky_link oh hide-on-mobile">';
-                    $result2 .= '<a href="http://temp18.co/" class="caps oh a-logo">';
+                    $result2 .= '<a href="/" class="caps oh a-logo">';
                     $result2 .= '<span>TEMP 18&#176;</span>';
                     $result2 .= '</a></li>';
                 }       

@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="col-xs-12 col-md-12 au-contact-inside">
-            <a class="button" href="http://temp18.co/contact/">Contact</a>
+            <a class="button" href="/contact/">Contact</a>
         </div>
     </div>
 </section>
@@ -17,17 +17,17 @@
             <div class="col-xs-12 f-top">
                 <div class="col-xs-12 f-t-info flex">
                     <div>
-                        <a href="http://temp18.co/">
+                        <a href="/">
                             <h2>Home</h2>
                         </a>
                     </div>
                     <div>
-                        <a href="http://temp18.co/about-us/">
+                        <a href="/about-us/">
                             <h2>About</h2>
                         </a>
                     </div>
                     <div>
-                        <a href="http://temp18.co/contact/">
+                        <a href="/contact/">
                             <h2>Contact</h2>
                         </a>
                     </div>
