@@ -1,3 +1,5 @@
+//All credit goes to http://kekselias.com/
+
 var app = window.app || {};
 app.globals = {
     init: function () {
