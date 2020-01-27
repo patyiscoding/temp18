@@ -29,10 +29,6 @@
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/carousel.swipe.js"></script>
 <script src="/assets/js/js.js"></script>
-<script src="/assets/js/slideShowOne.js"></script>
-<script src="/assets/js/slideShowTwo.js"></script>
-<!--<script src="/slideShowTwoBack2.js"></script>-->
-<script src="/assets/js/slideShowThree.js"></script>
 <script src="/assets/js/typed.js"></script>
 
 <meta charset="utf-8">
@@ -42,4 +38,3 @@
 <link href="/assets/css/css.css" rel="stylesheet" type="text/css">
 <link href="/assets/css/front.css" rel="stylesheet" type="text/css">
 <link href="/assets/css/animate.css" rel="stylesheet" type="text/css">
-<link href="/assets/css/slideShowBack.css" rel="stylesheet" type="text/css">
