@@ -1,3 +1,5 @@
+// All credit goes to http://kekselias.com/
+
 ! function (a, b) {
     "use strict";
 
